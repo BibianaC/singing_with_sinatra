@@ -49,3 +49,11 @@ end
 # This route will load the form.erb ERB (Embedded Ruby) file from a views/ directory. 
 # ERB files are typically normal HTML files which allow you to include Ruby code inside <% … %> tags, 
 # which will be parsed before being sent to the browser
+
+post '/form' do
+  "You said '#{params[:message]}'"
+end
+
+# This route is for the POST method, not GET. 
+# Also, all POST variables are available in the same params array as GET variables, 
+# so we can retrieve the message submitted with the form.
