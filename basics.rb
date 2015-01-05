@@ -57,3 +57,18 @@ end
 # This route is for the POST method, not GET. 
 # Also, all POST variables are available in the same params array as GET variables, 
 # so we can retrieve the message submitted with the form.
+
+get '/secret' do
+  erb :secret
+end
+
+post '/secret' do
+  params[:secret].reverse
+end
+
+# we've got a message encryptor which uses a special 'reverse' method to make the message seemingly unreadable, 
+# we need a way to decrypt the message
+
+get '/decrypt/:secret' do
+  params[:secret].reverse
+end
