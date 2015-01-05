@@ -79,6 +79,5 @@ end
 # Create our own 404 error message
 
 not_found do
-  status 404
-  'not found'
+  halt 404, 'page not found'
 end
