@@ -58,6 +58,8 @@ end
 # Also, all POST variables are available in the same params array as GET variables, 
 # so we can retrieve the message submitted with the form.
 
+# Encrypt
+
 get '/secret' do
   erb :secret
 end
@@ -71,4 +73,12 @@ end
 
 get '/decrypt/:secret' do
   params[:secret].reverse
+end
+
+# FourOhFour?
+# Create our own 404 error message
+
+not_found do
+  status 404
+  'not found'
 end
