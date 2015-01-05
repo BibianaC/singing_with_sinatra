@@ -40,3 +40,12 @@ end
 # Anything included in the URL after /more/ will be accessible through the :splat key in the params array.
 
 
+# View Files & POST
+
+get '/form' do
+  erb :form
+end
+
+# This route will load the form.erb ERB (Embedded Ruby) file from a views/ directory. 
+# ERB files are typically normal HTML files which allow you to include Ruby code inside <% … %> tags, 
+# which will be parsed before being sent to the browser
